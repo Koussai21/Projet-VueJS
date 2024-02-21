@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {isAuthenticated} from '../lib/store'
+import { store } from '../lib/store'
 
 
 export default {
@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     goToDashboard() {
-      if (isAuthenticated) {
+      if (store.isAuthenticated) {
         this.$router.push('/dashboard')
       } else {
         this.$router.push('/login')
