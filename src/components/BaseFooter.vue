@@ -14,12 +14,12 @@
  </script>
 
  <style>
-
-footer { 
+    footer { 
     background-color: #333; 
     color: white; 
     padding: 10px 0; 
     text-align: center;
 }
+
 
 </style>
