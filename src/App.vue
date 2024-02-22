@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseLayout>
-      <HomePage />
+      
     </BaseLayout>
   </div>
 </template>
@@ -14,7 +14,6 @@ import BaseLayout from './pages/BaseLayout.vue';
 export default {
   name: 'App',
   components: {
-    HomePage,
     BaseLayout,
 
   }
