@@ -3,16 +3,16 @@
         <nav> 
             <ul> 
                 <div class="liste">
-                    <li><a href="home.html">Home</a></li> 
+                    <li><router-link to="/">Home</router-link></li>
+                    <li><router-link to="/Conversation">Conversation</router-link></li>  
                     <li><a href="about.html">About</a></li> 
                     <li><a href="contact.html">Contact</a></li> 
                     <SignInButton >Sign In</SignInButton>
-                    
                 </div>
+                <router-view/>
             </ul> 
         </nav> 
     </header>
-
 </template>
 
 <script>
