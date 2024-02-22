@@ -19,10 +19,5 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Conversation',
-  // Add your component logic here
-}
-</script>
+
 

@@ -1,13 +1,12 @@
 <template>
   <div>
     <BaseLayout>
-      
+      <HomePage />
     </BaseLayout>
   </div>
 </template>
 
 <script>
-import HomePage from './pages/HomePage.vue';
 import BaseLayout from './pages/BaseLayout.vue';
 
 
