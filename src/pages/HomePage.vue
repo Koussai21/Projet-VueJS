@@ -1,19 +1,22 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    
-    
+    <p>Bienvenue sur notre site ! Nous sommes fiers de vous offrir une plateforme qui excelle dans la gestion et l'envoi de mails. Explorez toutes les fonctionnalités et n'hésitez pas à nous contacter si vous avez des questions.</p>
+    <!-- Ajoutez d'autres éléments ou fonctionnalités selon vos besoins -->
   </div>
 </template>
 
 <script>
 import { store } from '../lib/store'
 
-
 export default {
+  data() {
+    return {
+      msg: "Bienvenue sur notre site !",
+    };
+  },
   computed: {
     username() {
-      // We will see what `params` is shortly
       return this.$route.params.username
     },
   },
@@ -27,8 +30,6 @@ export default {
     },
   },
 }
-  
-
 </script>
 
 <style scoped>
