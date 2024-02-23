@@ -7,18 +7,18 @@
                     <li><router-link to="/Conversation">Conversation</router-link></li>  
                     <li><a href="about.html">About</a></li> 
                     <li><a href="contact.html">Contact</a></li> 
-                    <SignInButton >Sign In</SignInButton>
+                    <SignInButton v-if="!isAuthenticated" @click="redirectToSignIn">Sign In</SignInButton>
                     <GoogleLogin>Sign In</GoogleLogin>
                 </div>
                 <router-view/>
             </ul> 
-        </nav> 
+        </nav>  
     </header>
 </template>
 
 <script>
         import SignInButton from "./SignInButton.vue";
-        import GoogleLogin from "./GoogleLogin.vue";
+
 
         export default {
         name: 'BaseHeader',
@@ -27,10 +27,12 @@
         },
         components:{
             SignInButton,
-            GoogleLogin
+
         },
         methods:{
-            
+            redirectToSignIn() {
+            this.$router.push("/signin"); 
+        },
         }
         
         };   
