@@ -8,8 +8,9 @@
                     <li><a href="about.html">About</a></li> 
                     <li><a href="contact.html">Contact</a></li> 
                     <SignInButton v-if="!isAuthenticated" @click="redirectToSignIn">Sign In</SignInButton>
+                    <GoogleLogin v-if="!isAuthenticated" @click="redirectToSignIn">Sign In</GoogleLogin>
                 </div>
-                <router-view/>
+                
             </ul> 
         </nav>  
     </header>
@@ -17,7 +18,7 @@
 
 <script>
         import SignInButton from "./SignInButton.vue";
-        import { mapGetters } from "vuex"; 
+
 
         export default {
         name: 'BaseHeader',
@@ -27,9 +28,6 @@
         components:{
             SignInButton,
 
-        },
-        computed: {
-        ...mapGetters(["isAuthenticated"]),
         },
         methods:{
             redirectToSignIn() {
